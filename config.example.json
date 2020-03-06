@@ -2,7 +2,7 @@
 	"threads": 2,
 	"coin": "etc",
 	"name": "main",
-	"pplns": 3000,
+	"pplns": 30000,
 
 	"proxy": {
 		"enabled": true,
@@ -82,7 +82,7 @@
 		"endpoint": "127.0.0.1:6379",
 		"poolSize": 10,
 		"database": 0,
-		"password": ""
+		"password": "2g)}NMn6z[%g/UDt@u&tE9}-PeS8x?Ynb]^"
 	},
 
 	"unlocker": {
