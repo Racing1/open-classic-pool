@@ -6,9 +6,11 @@
           <strong>Ethereum Classic Pool</strong>
         </h1>
         <strong>Min. payout threshold: {{config.PayoutThreshold}}</strong><br/>
-        <span class="label label-success">PROP</span> Stable and profitable pool with regular payouts.<br/>
-        <span class="label label-success">PPLNS</span> Real time PPLNS payout scheme
-      </div>
+        <span class="label label-success">PhoenixMax</span> Stable and profitable pool with regular payouts.<br/>
+        <span class="label label-success">Reward</span> PPLNS (N=30000 Shares)<br/>
+        <span class="label label-success">Fixed Fee</span> 0.65% <br/>
+        <span class="label label-success">Help Me</span> Active Support Through Discord & Email
+      </div> 
       <div class="col-md-3 stats">
         <div><i class="fa fa-users"></i> Miners Online: <span id="poolHashrate">{{format-number stats.model.minersTotal}}</span></div>
         <div><i class="fa fa-tachometer"></i> Pool Hash Rate: <span id="poolHashrate">{{format-hashrate stats.model.hashrate}}</span></div>
@@ -44,13 +46,22 @@
   <div>
     <hr/>
     <h4 class="note note-info text-center">
-      EthDcrMiner64.exe -epool {{config.StratumHost}}:8008 -esm 0 -ewal &lt;address&gt; -eworker &lt;WORKER&gt; -allcoins 1 -allpools 1
+	<i class="fa fa-tachometer"></i> <b>Welcome to PhoenixMax High Performance Ethereum Classic Mining Pool</b> <i class="fa fa-tachometer"></i><br/><br/>
+	PhoenixMax pools are Highly Optimized and hosted on Dedicated High Performance Servers
+	located in the U.S. and are fully protected. Low Uncle/Orphan rates due to lightning fast gigabit network connectivity.
+	This results in industry leading propagation times which equals more $$$ in your pocket!
     </h4>
-  </div>
-  <div>
     <hr/>
-    <h4 class="note note-info text-center">
-      ethminer.exe -F {{config.HttpHost}}:{{config.HttpPort}}/&lt;address&gt;/&lt;worker&gt; -G
-    </h4>
+	<div>
+	<hr/>
+	<h4 class="note note-info text-center">
+	<b>Pool Features</b><br/><br/>
+	<p> Your immature balance and your pending balance will only start to show a balance when the pool has found a block
+      after you started mining. Do not worry if you do not see these figures change immediately!</p>
+     <p> It does not mean that your miner is not working or the pool has a problem, depending on the pool hashrate
+      it can sometimes take a few hours to find a block. You can check when the last block was found by the pool on the "Pool Blocks" page.</p>
+     <p> Also you may want to take a look at our "Help" page that shows you how to configure your mining rig to mine on our pools.</p>
+	</h4>
+	</div>
   </div>
-</div>
+
