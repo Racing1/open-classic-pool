@@ -31,7 +31,7 @@ type UnlockerConfig struct {
 
 const minDepth = 16
 
-var constReward = math.MustParseBig256("4000000000000000000")
+var constReward = math.MustParseBig256("3200000000000000000")
 var uncleReward = new(big.Int).Div(constReward, new(big.Int).SetInt64(32))
 
 // Donate 5% from pool fees to developers
@@ -511,7 +511,7 @@ func weiToShannonInt64(wei *big.Rat) int64 {
 func getUncleReward(uHeight, height int64) *big.Int {
 	reward := new(big.Int).Set(constReward)
 	reward.Mul(big.NewInt(uHeight+8-height), reward)
-	reward.Div(reward, big.NewInt(8))
+	reward.Div(reward, big.NewInt(32))
 	return reward
 }
 
