@@ -1,43 +1,37 @@
 <div class="container">
   <div class="page-header">
-    <h1>How To Mine</h1>
+    <center><h1>Mining Instructions for PhoenixMax ETC Pool</h1></center>
   </div>
-  <p class="lead">In order to mine on this pool you need to have an
-    <a href="https://github.com/ethereum/webthree-umbrella/releases" rel="nofollow" target="_blank">ethminer</a> installation
-    pointed to<br/><code>{{config.HttpHost}}:{{config.HttpPort}}/YOUR_ETH_ADDRESS/RIG_ID</code>
-  </p>
+  <p class="lead">In order to mine on this pool you need to have mining software. We recommend the following:</p>
+ <br/>
+<a href="https://claymore-dual.github.io/"> Claymore's Dual Ethereum GPU Miner</a> or
+<a href="https://phoenix-miner.github.io/"> PhoenixMiner 4.7c GPU Miner</a>
+ <br/><br/>
   <dl class="dl-horizontal">
-    <dt>YOUR_ETH_ADDRESS</dt>
-    <dd>This is your address for payouts, generate one with geth, or mine directly to exchange like
-      <a href="http://poloniex.com" rel="nofollow" target="_blank">Poloniex</a>
-      or <a href="http://bittrex.com" rel="nofollow" target="_blank">Bittrex</a>.<br/>
-      <strong>Example:</strong> <code>0x24947682e051f136f593c6960fdb6a1550577d3a</code>.
+    <dt>YOUR_ETC_ADDRESS</dt>
+    <dd>This is your address for payouts, generate one with geth, or mine directly to an exchange like
+      <a href="https://www.coinbase.com/" rel="nofollow" target="_blank">Coinbase</a>
+      or <a href="https://www.myetherwallet.com/" rel="nofollow" target="_blank">myetherwallet</a>.<br/>
+      <strong>Example:</strong> <code>0xb85150eb365e7df0941f0cf08235f987ba91506a</code>.
     </dd>
     <dt>RIG_ID</dt>
     <dd>
-      ID of your farm to distinguish it from your other rig. If you have just one rig, feel free to omit this param.
-      This param must be short alphanumeric string with optional dashes and underscores.<br/>
+      ID of your rig to distinguish it from other mining rigs. If you have just one rig, feel free to omit this parameter.
+      This parameter must be a short alphanumeric string with optional dashes and underscores.<br/>
       <strong>Example:</strong> <code>rig-1</code>
     </dd>
   </dl>
   <p>
-    <strong>Full example:</strong>
-    <code>ethminer -F {{config.HttpHost}}:{{config.HttpPort}}/0x24947682e051f136f593c6960fdb6a1550577d3a/myfarm -G --farm-recheck 200</code>.<br/>
-    <span class="label label-info">Hint:</span> If you are compiling ethminer from latest source, please also use
-      extra <code>--disable-submit-hashrate</code> option.
-  </p>
+    <strong>Full example: Claymore Miner</strong>
+    EthDcrMiner64.exe -epool stratum+tcp://etcpool.phoenixmax.org:8008 -ewal 0xCB63BEA712DFE1dd1b8fD6674398605341a83C6F -epsw x -eworker Rig01 <br/><br/>
+    <strong>Full example: Phoenix Miner</strong>
+    PhoenixMiner.exe -epool stratum+tcp://etcpool.phoenixmax.org:8008 -ewal 0xCB63BEA712DFE1dd1b8fD6674368905311a83C6F -epsw x -eworker Rig01 <br/><br/>
+ </p>
 
-  <h4>Stratum Mining with Stratum Proxy for Ethereum</h4>
-  <p class="lead">Grab proxy from <a href="https://github.com/Atrides/eth-proxy" re="nofollow" target="_blank">eth-proxy GitHub repo</a>.</p>
-  <p class="lead">Edit <code>eth-proxy.conf</code> and specify our pool's <code>HOST: {{config.StratumHost}}</code>, <code>PORT: {{config.StratumPort}}</code> and your <code>WALLET</code>.</p>
-
-  <h4>Mining with Ether-Proxy</h4>
-  <p class="lead">Use stable release of <a href="https://github.com/sammy007/ether-proxy/releases" target="_blank">Ethereum Solo/Pool Mining Proxy</a>.</p>
-
-  <h4>Advice</h4>
+  <h4><b>Advice</b></h4>
   <p>CPU mining is not recommended.</p>
   <h4>Terms of Service</h4>
   <p>By using the pool you accept all possible risks related to experimental software usage.<br/>
-     Pool owner can't compensate any irreversible losses, but will do his best to prevent worst case.
+     Pool owner can't compensate any irreversible losses.
   </p>
 </div>
